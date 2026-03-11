@@ -323,34 +323,7 @@ body {
   }
 }
 
-/* ------------------------------------------------------------------
-   desktop-only viewport ratio enforcement
-   keep aspect ratio (e.g. 16:9) so page looks uniform across monitors
-   mobile layout remains unchanged because query is min-width
-   ------------------------------------------------------------------ */
-@media (min-width: 769px) {
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* ensure the body itself fills the screen so the wrapper can center */
-    min-height: 100vh;
-    margin: 0;
-  }
 
-  .viewport {
-    /* fit the window while preserving a 16:9 aspect ratio */
-    width: min(100vw, calc(100vh * (16/9)));
-    height: min(100vh, calc(100vw * (9/16)));
-    overflow: auto;
-  }
-
-  /* ensure inner content stretches to the wrapper size */
-  .viewport > * {
-    width: 100%;
-    height: 100%;
-  }
-}
 
 
 .cards-grid {

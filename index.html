@@ -46,11 +46,13 @@
               <div class="section-label-content">
                 <!-- 아래 <h2> 태그의 "소개" 텍스트를 원하는 제목으로 바꾸세요! -->
                 <h2 class="section-title" data-type="about">소개</h2>
-                <!-- 아래 <p> 태그 안의 텍스트를 수정하여 본인 소개를 작성하세요. -->
-                <p class="section-intro section-intro--narrow">
-                  컴퓨터와 프로그래밍에 호기심을 가져 다양한 분야에 도전하는 학생입니다. 
-                  동아리에서 다양한 기술을 배우고 팀 프로젝트를 경험하며 개발과 보안 역량을 함께 성장시키고 싶습니다.
-                </p>
+                
+                <!-- 아래 영역에 여러 문구를 넣을 수 있습니다. 원하는 만큼 <span class="section-subtitle-item"> 태그를 추가하세요. -->
+                <div class="section-subtitle-container">
+                  <span class="section-subtitle-item">컴퓨터와 프로그래밍에 호기심을 가져 다양한 분야에 도전하는 학생입니다.</span>
+                  <span class="section-subtitle-item">동아리에서 다양한 기술을 배우고 팀 프로젝트를 경험하며 성장하고 싶습니다.</span>
+                  <!-- 여기에 추가 문구를 넣으려면 위 줄을 복사해서 내용을 바꾸세요 -->
+                </div>
               </div>
             </div>
           </div>
@@ -65,10 +67,12 @@
               <div class="section-label-content">
                 <!-- 아래 <h2> 태그의 "프로젝트" 텍스트를 원하는 제목으로 바꾸세요! -->
                 <h2 class="section-title" data-type="projects">프로젝트</h2>
-                <!-- 아래 <p> 태그 안의 텍스트를 수정하여 프로젝트 섹션 소개를 작성하세요. -->
-                <p class="section-intro section-intro--narrow" id="projects-intro">
-                  Firebase Firestore의 `projects` 컬렉션을 불러오고 있습니다.
-                </p>
+                
+                <!-- 아래 영역에 프로젝트 관련 여러 문구를 넣을 수 있습니다. -->
+                <div class="section-subtitle-container">
+                  <span class="section-subtitle-item" id="projects-intro">Firebase Firestore의 `projects` 컬렉션을 불러오고 있습니다.</span>
+                  <span class="section-subtitle-item">진행했던 주요 프로젝트들을 아래에서 확인하실 수 있습니다.</span>
+                </div>
               </div>
             </div>
             <div id="projects-grid" class="cards-grid">
@@ -85,9 +89,11 @@
               <span class="section-label-number">03</span>
               <div class="section-label-content">
                 <h2 class="section-title" data-type="language">언어</h2>
-                <p class="section-intro section-intro--narrow" id="language-intro">
-                  Firebase의 `projects` 컬렉션의 language 필드를 기반으로 사용 언어 정보를 표시합니다.
-                </p>
+                
+                <div class="section-subtitle-container">
+                  <span class="section-subtitle-item" id="language-intro">사용 언어 정보를 표시합니다.</span>
+                  <span class="section-subtitle-item">다양한 기술 스택을 보유하고 있습니다.</span>
+                </div>
               </div>
             </div>
           </div>
@@ -102,12 +108,12 @@
             <li>
               <strong>Email</strong> :
               <!-- "mailto:" 뒤에 본인의 이메일 주소를 입력하세요. -->
-              <a href="mailto:jonghyeonchoi@gmail.com">jonghyeonchoi@gmail.com</a>
+              <a href="mailto:jonghyeonchoi@gmail.com">jonghyeon101125@gmail.com</a>
             </li>
             <li>
               <strong>Discord</strong> :
               <!-- "href=" 뒤에 본인의 디스코드 사용자 링크를, <a> 태그 사이에 사용자 이름을 적으세요. -->
-              <a href="https://discord.com/users/u_jan01" target="_blank" rel="noopener noreferrer">u_jan01</a>
+              <a href="https://discord.com/users/" target="_blank" rel="noopener noreferrer">https://discord.com/users/u_jan01</a>
             </li>
           </ul>
         </div>
@@ -151,6 +157,19 @@
             <span class="section-label-number">02</span>
             <h2 class="section-title">프로젝트</h2>
           </div>
+          
+          <!-- 프로젝트 상세 설명 영역: 이 부분을 수정하여 전체 프로젝트에 대한 설명을 넣으세요. -->
+          <div class="detail-card">
+            <p class="detail-text">
+              여기에 프로젝트 전체에 대한 상세한 설명을 작성할 수 있습니다. 
+              여러 줄의 문구를 자유롭게 추가해 보세요.
+            </p>
+            <p class="detail-text">
+              Firebase에서 불러오는 개별 프로젝트 카드들 외에, 
+              이곳에 공통적인 안내 사항이나 프로젝트 수행 철학 등을 적으시면 좋습니다.
+            </p>
+          </div>
+
           <div id="projects-detail-grid" class="cards-grid">
             <!-- JS로 채워짐 -->
           </div>
@@ -170,7 +189,7 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <span>© <span id="year"></span> 최종현ㅋ. All rights reserved.</span>
+        <span>© <span id="year"></span> 최종현. im handsome yeahh.</span>
       </div>
     </footer>
 

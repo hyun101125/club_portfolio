@@ -232,13 +232,104 @@ body {
   margin-top: 1rem;
 }
 
-.section-panel--about {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.hidden {
+  display: none !important;
 }
 
-.section-label {
+/* 상세 화면 스타일 */
+.detail-view {
+  padding: 4rem 0;
+  min-height: calc(100vh - 128px);
+  background: var(--bg);
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 2rem;
+  transition: color 0.2s ease;
+}
+
+.back-btn:hover {
+  color: var(--accent-strong);
+}
+
+.detail-content {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.detail-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-top: 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.detail-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.detail-info h3 {
+  font-size: 1.3rem;
+  color: var(--accent-strong);
+  margin-bottom: 1rem;
+}
+
+.detail-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detail-info li {
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
   position: relative;
+}
+
+.detail-info li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.btn-sm {
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+.section-title {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.section-title:hover {
+  color: var(--accent-strong);
+}
+
+@media (max-width: 768px) {
+  .detail-card {
+    padding: 1.5rem;
+  }
 }
 
 .section-label-number {

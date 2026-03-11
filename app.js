@@ -38,6 +38,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // smooth-scroll to section anchors when nav links are clicked
+  document.querySelectorAll('.nav-list a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      // close mobile menu if open
+      if (navList.classList.contains('open')) {
+        navList.classList.remove('open');
+      }
+      e.preventDefault();
+      const id = link.getAttribute('href');
+      const target = document.querySelector(id);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // also let the visible section titles themselves be clickable (they're bold)
+  document.querySelectorAll('.section-title').forEach(title => {
+    title.style.cursor = 'pointer';
+    title.addEventListener('click', () => {
+      const section = title.closest('section');
+      if (section && section.id) {
+        document.getElementById(section.id).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
   initFirebaseAndLoadData();
 });
 

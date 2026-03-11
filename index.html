@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
+    <div class="viewport">
+      <header class="site-header">
       <div class="container header-inner">
         <div class="logo">My<span>Portfolio</span></div>
         <nav class="nav">
@@ -18,7 +19,6 @@
             <span></span>
           </button>
           <ul class="nav-list">
-            <li><a href="#about">About</a></li>
             <li><a href="#projects">프로젝트</a></li>
             <li><a href="#language">언어</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -127,5 +127,6 @@
 
     <!-- Firebase + Firestore를 사용하는 메인 스크립트 (ES Module) -->
     <script type="module" src="app.js"></script>
+    </div> <!-- .viewport -->
   </body>
 </html>

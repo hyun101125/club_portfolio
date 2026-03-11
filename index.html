@@ -1,130 +1,16 @@
-<!DOCTYPE html>
-<html lang="ko">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base href="/club_portfolio/" />
-    <title>포트폴리오</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Section Detail View</title>
+    <meta property="og:image" content="https://bolt.new/static/og_default.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png" />
   </head>
   <body>
-      <header class="site-header">
-      <div class="container header-inner">
-        <div class="logo">My<span>Portfolio</span></div>
-        <nav class="nav">
-          <button class="nav-toggle" aria-label="메뉴 열기/닫기">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <ul class="nav-list">
-            <li><a href="#projects">프로젝트</a></li>
-            <li><a href="#language">언어</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="container hero-inner">
-          <div>
-            <h1 class="hero-title">
-              <span class="accent">포트폴리오!</span>
-            </h1>
-            <p class="hero-text">제가 한 모든것들을 나열해 보았습니다.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <div class="section-panel section-panel--about">
-            <div class="section-label">
-              <span class="section-label-number">01</span>
-              <div class="section-label-content">
-                <h2 class="section-title">소개</h2>
-                <p class="section-intro section-intro--narrow">
-                  컴퓨터와 프로그래밍에 호기심을 가져 다양한 분야에 도전하는 학생입니다. 
-                  UNIFOX에서 다양한 기술을 배우고 팀 프로젝트를 경험하며 개발과 보안 역량을 함께 성장시키고 싶습니다.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="section alt">
-        <div class="container">
-          <div class="section-panel section-panel--projects">
-            <div class="section-label">
-              <span class="section-label-number">02</span>
-              <div class="section-label-content">
-                <h2 class="section-title">프로젝트</h2>
-                <p class="section-intro section-intro--narrow" id="projects-intro">
-                  Firebase Firestore의 `projects` 컬렉션을 불러오고 있습니다.
-                </p>
-              </div>
-            </div>
-            <div id="projects-grid" class="cards-grid">
-              <!-- JS로 Firebase에서 로드 -->
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="language" class="section">
-        <div class="container">
-          <div class="section-panel section-panel--language">
-            <div class="section-label">
-              <span class="section-label-number">03</span>
-              <div class="section-label-content">
-                <h2 class="section-title">언어</h2>
-                <p class="section-intro section-intro--narrow" id="language-intro">
-                  Firebase의 `projects` 컬렉션의 language 필드를 기반으로 사용 언어 정보를 표시합니다.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section alt">
-        <div class="container">
-          <h2 class="section-title">Contact</h2>
-          <ul class="contact-list">
-            <li>
-              <strong>Email</strong> :
-              <a href="mailto:jonghyeonchoi@gmail.com">jonghyeonchoi@gmail.com</a>
-            </li>
-            <li>
-              <strong>GitHub</strong> :
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
-                >https://github.com/</a
-              >
-            </li>
-            <li>
-              <strong>LinkedIn</strong> :
-              <a
-                href="https://linkedin.com/in/your-id"
-                target="_blank"
-                rel="noopener noreferrer"
-                >https://linkedin.com/in/your-id</a
-              >
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <span>© <span id="year"></span> 최종현ㅋ. All rights reserved.</span>
-      </div>
-    </footer>
-
-    <!-- Firebase + Firestore를 사용하는 메인 스크립트 (ES Module) -->
-    <script type="module" src="app.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

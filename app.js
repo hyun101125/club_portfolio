@@ -67,12 +67,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 섹션 제목(타이틀) 클릭 시 상세 화면으로 전환하는 이벤트 리스너
   document.addEventListener('click', (e) => {
-    // 클릭된 요소가 .section-title 클래스를 가지고 있는지 확인
+    // 클릭된 요소가 .section-title 클래스를 가지고 있는지 확인합니다.
+    // 이제 '자세히 보기' 버튼은 없으므로, 오직 타이틀 클릭에만 반응합니다.
     if (e.target.classList.contains('section-title')) {
-      const section = e.target.closest('section');
-      const type = section ? section.id : null;
+      const target = e.target;
+      const section = target.closest('section');
+      // data-type 속성을 사용하여 어떤 섹션인지 식별합니다.
+      const type = target.dataset.type || (section ? section.id : null);
       
-      // 소개, 프로젝트, 언어 섹션인 경우에만 상세 화면을 보여줍니다.
+      // 'about', 'projects', 'language' 섹션인 경우에만 상세 화면을 보여줍니다.
       if (type && ['about', 'projects', 'language'].includes(type)) {
         showDetailView(type);
       }

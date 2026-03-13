@@ -99,28 +99,31 @@ body {
   display: none;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* 작대기 세 개를 가로 중앙 정렬 */
-  gap: 4px;
-  width: 40px;          /* 크기를 조금 키움 */
-  height: 40px;
+  align-items: center;
+  gap: 4px; /* 작대기 사이 간격 */
+  width: 44px;
+  height: 44px;
   background: transparent;
   border: 1px solid var(--border-subtle);
-  border-radius: 50%;   /* 완벽한 원형 */
+  border-radius: 50%;
   padding: 0;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
+  overflow: hidden; /* 밖으로 튀어나오지 않게 */
 }
 
 .nav-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-strong);
 }
 
 .nav-toggle span {
   display: block;
-  width: 18px;          /* 작대기 너비 */
-  height: 2px;          /* 작대기 두께 */
+  width: 22px; /* 길이를 살짝 키움 */
+  height: 2px;
   background: var(--text);
-  border-radius: 999px;
+  border-radius: 2px;
+  margin: 0;
 }
 
 .hero {
@@ -162,7 +165,7 @@ body {
   font-size: 0.98rem;
   line-height: 1.7;
   margin: 0 auto;
-  white-space: pre-wrap; /* 줄바꿈 보존 */
+  white-space: pre-wrap;
 }
 
 .hero-actions {
@@ -286,7 +289,7 @@ body {
   line-height: 1.8;
   color: var(--text);
   margin-bottom: 2rem;
-  white-space: pre-wrap; /* 줄바꿈 보존 */
+  white-space: pre-wrap;
 }
 
 .detail-info h3 {
@@ -322,13 +325,13 @@ body {
 
 /* 희미하고 작은 문구 스타일 (직접 수정 가능) */
 .detail-faint-text {
-  font-size: 0.1rem;    /* 글꼴 크기 수정: 0.8rem */
-  opacity: 0.3;         /* 투명도 수정: 0.4 */
-  color: var(--muted);  /* 기본 색상 */
-  margin-top: 2.4rem;     /* 위쪽 여백 수정 */
-  text-align: right;    /* 가운데 정렬로 변경 */
-  font-style: italic;   /* 기울임꼴 */
-  white-space: pre-wrap; /* 줄바꿈 보존 */
+  font-size: 0.8rem;
+  opacity: 0.4;
+  color: var(--muted);
+  margin-top: 2.4rem;
+  text-align: center;
+  font-style: italic;
+  white-space: pre-wrap;
 }
 
 /* ---------------------------------------------------------
@@ -382,11 +385,11 @@ body {
   color: var(--muted);
   margin-bottom: 0.3rem;
   line-height: 1.5;
-  white-space: pre-wrap; /* 줄바꿈 보존 */
+  white-space: pre-wrap;
 }
 
 .detail-info p {
-  white-space: pre-wrap; /* 상세 정보 내 문단 줄바꿈 보존 */
+  white-space: pre-wrap;
 }
 
 /* ---------------------------------------------------------
@@ -521,7 +524,7 @@ body {
   font-size: 0.9rem;
   color: var(--muted);
   margin: 0 0 0.85rem;
-  white-space: pre-wrap; /* 줄바꿈 보존 */
+  white-space: pre-wrap;
 }
 
 .card-kv {
@@ -556,7 +559,7 @@ body {
   color: rgba(209, 213, 219, 0.7);
   font-size: 0.9rem;
   line-height: 1.65;
-  white-space: pre-wrap; /* 줄바꿈 보존 */
+  white-space: pre-wrap;
 }
 
 .card-list {
@@ -657,7 +660,7 @@ body {
   width: 100%;
   text-align: center;
   margin-bottom: 2rem;
-  display: block; /* Contact 타이틀은 전체 너비 사용 */
+  display: block;
 }
 
 .contact-list {
@@ -666,10 +669,22 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
+  align-items: center; /* 항목들을 가로 중앙으로 */
+  justify-content: center;
+  gap: 1rem; /* 간격을 조금 더 넓힘 */
   color: var(--muted);
   font-size: 0.95rem;
+  width: 100%;
+}
+
+.contact-list li {
+  text-align: center;
+  width: 100%;
+}
+
+.contact-list strong {
+  color: var(--accent-strong);
+  margin-right: 0.5rem;
 }
 
 .contact-list a {

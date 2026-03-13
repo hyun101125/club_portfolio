@@ -99,20 +99,26 @@ body {
   display: none;
   flex-direction: column;
   justify-content: center;
+  align-items: center; /* 작대기 세 개를 가로 중앙 정렬 */
   gap: 4px;
-  width: 36px;
-  height: 36px;
+  width: 40px;          /* 크기를 조금 키움 */
+  height: 40px;
   background: transparent;
   border: 1px solid var(--border-subtle);
-  border-radius: 999px;
+  border-radius: 50%;   /* 완벽한 원형 */
   padding: 0;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nav-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .nav-toggle span {
   display: block;
-  width: 18px;
-  height: 2px;
+  width: 18px;          /* 작대기 너비 */
+  height: 2px;          /* 작대기 두께 */
   background: var(--text);
   border-radius: 999px;
 }

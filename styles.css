@@ -324,14 +324,16 @@ body {
 }
 
 /* 희미하고 작은 문구 스타일 (직접 수정 가능) */
-.detail-faint-text {
-  font-size: 0.8rem;    /* 글꼴 크기: 0.8rem 정도로 설정해야 보입니다. */
-  opacity: 0.4;         /* 투명도: 0.4 */
+.detail-view .detail-faint-text {
+  display: block;
+  font-size: 0.3rem;    /* 글꼴 크기: 0.85rem (사용자님이 원하는 값으로 수정하세요) */
+  opacity: 0.45;         /* 투명도: 0.45 */
   color: var(--muted);
-  margin-top: 2.4rem;
-  text-align: center;   /* 다시 가운데 정렬로 복구 */
+  margin-top: 2.5rem;
+  text-align: center;
   font-style: italic;
   white-space: pre-wrap;
+  width: 100%;
 }
 
 /* ---------------------------------------------------------

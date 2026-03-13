@@ -156,6 +156,7 @@ body {
   font-size: 0.98rem;
   line-height: 1.7;
   margin: 0 auto;
+  white-space: pre-wrap; /* 줄바꿈 보존 */
 }
 
 .hero-actions {
@@ -284,6 +285,7 @@ body {
   line-height: 1.8;
   color: var(--text);
   margin-bottom: 2rem;
+  white-space: pre-wrap; /* 줄바꿈 보존 */
 }
 
 .detail-info h3 {
@@ -328,12 +330,13 @@ body {
 
 /* 희미하고 작은 문구 스타일 (직접 수정 가능) */
 .detail-faint-text {
-  font-size: 0.8rem;    /* 글꼴 크기: 0.8rem (원하는 대로 수정하세요) */
-  opacity: 0.4;         /* 투명도: 0.4 (0.0 ~ 1.0 사이에서 조절하세요) */
+  font-size: 0.2rem;    /* 글꼴 크기: 0.8rem (원하는 대로 수정하세요) */
+  opacity: 0.2;         /* 투명도: 0.4 (0.0 ~ 1.0 사이에서 조절하세요) */
   color: var(--muted);  /* 기본 색상 */
-  margin-top: 2rem;     /* 위쪽 여백 */
+  margin-top: 2=4rem;     /* 위쪽 여백 */
   text-align: right;    /* 오른쪽 정렬 */
   font-style: italic;   /* 기울임꼴 (선택 사항) */
+  white-space: pre-wrap; /* 줄바꿈 보존 */
 }
 
 @media (max-width: 768px) {
@@ -387,6 +390,11 @@ body {
   color: var(--muted);
   margin-bottom: 0.3rem;
   line-height: 1.5;
+  white-space: pre-wrap; /* 줄바꿈 보존 */
+}
+
+.detail-info p {
+  white-space: pre-wrap; /* 상세 정보 내 문단 줄바꿈 보존 */
 }
 
 @media (max-width: 768px) {
@@ -476,6 +484,7 @@ body {
   font-size: 0.9rem;
   color: var(--muted);
   margin: 0 0 0.85rem;
+  white-space: pre-wrap; /* 줄바꿈 보존 */
 }
 
 .card-kv {
@@ -510,6 +519,7 @@ body {
   color: rgba(209, 213, 219, 0.7);
   font-size: 0.9rem;
   line-height: 1.65;
+  white-space: pre-wrap; /* 줄바꿈 보존 */
 }
 
 .card-list {
@@ -607,15 +617,27 @@ body {
 
 #contact .container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#contact .section-intro {
-  margin-left: auto;
-  margin-right: auto;
+#contact .section-title {
+  width: 100%;
+  text-align: center;
 }
 
 #contact .contact-list {
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#contact .contact-list li {
+  margin-bottom: 0.5rem;
 }
 
 #contact .contact-list a {
@@ -639,6 +661,7 @@ body {
   padding: 1.1rem 1.5rem;
   font-size: 0.8rem;
   color: var(--muted);
+  text-align: center;
 }
 
 @media (max-width: 768px) {

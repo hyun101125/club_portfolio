@@ -325,7 +325,7 @@ body {
 
 /* 희미하고 작은 문구 스타일 (직접 수정 가능) */
 .detail-faint-text {
-  font-size: 0.1rem;
+  font-size: 0.05rem;
   opacity: 0.3;
   color: var(--muted);
   margin-top: 2.4rem;

@@ -316,11 +316,11 @@ body {
 
 /* 희미하고 작은 문구 스타일 (직접 수정 가능) */
 .detail-faint-text {
-  font-size: 0.8rem;    /* 글꼴 크기 수정: 0.8rem */
-  opacity: 0.4;         /* 투명도 수정: 0.4 */
+  font-size: 0.1rem;    /* 글꼴 크기 수정: 0.8rem */
+  opacity: 0.3;         /* 투명도 수정: 0.4 */
   color: var(--muted);  /* 기본 색상 */
   margin-top: 2.4rem;     /* 위쪽 여백 수정 */
-  text-align: center;    /* 가운데 정렬로 변경 */
+  text-align: right;    /* 가운데 정렬로 변경 */
   font-style: italic;   /* 기울임꼴 */
   white-space: pre-wrap; /* 줄바꿈 보존 */
 }

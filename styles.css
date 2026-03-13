@@ -326,6 +326,16 @@ body {
   color: var(--accent-strong);
 }
 
+/* 희미하고 작은 문구 스타일 (직접 수정 가능) */
+.detail-faint-text {
+  font-size: 0.8rem;    /* 글꼴 크기: 0.8rem (원하는 대로 수정하세요) */
+  opacity: 0.4;         /* 투명도: 0.4 (0.0 ~ 1.0 사이에서 조절하세요) */
+  color: var(--muted);  /* 기본 색상 */
+  margin-top: 2rem;     /* 위쪽 여백 */
+  text-align: right;    /* 오른쪽 정렬 */
+  font-style: italic;   /* 기울임꼴 (선택 사항) */
+}
+
 @media (max-width: 768px) {
   .detail-card {
     padding: 1.5rem;
